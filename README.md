@@ -38,7 +38,7 @@ Clone the repository and install dependencies:
 git clone https://github.com/kwerlr/plagiarism-checker.git
 cd plagiarism-checker
 pip install -r requirements.txt
-
+```
 
 PDF Support
 Install Poppler to enable .pdf reading:
