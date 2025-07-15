@@ -77,18 +77,6 @@ Then open your browser to: http://localhost:8501
 
 ---
 
-## Project Structure
-
-plagiarism-checker/
-├── app.py             # Streamlit app interface
-├── plagiarism.py      # Core logic: embedding + web check
-├── utils.py           # File handling and sentence processing
-├── requirements.txt   # Python dependencies
-└── README.md          # Project documentation
-
-
----
-
 ## Author
 
 Developed by Vagisha Sharma
