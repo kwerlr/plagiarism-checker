@@ -40,45 +40,54 @@ cd plagiarism-checker
 pip install -r requirements.txt
 ```
 
-PDF Support
-Install Poppler to enable .pdf reading:
+## PDF Support
 
-Windows: Download from Poppler for Windows
+Install Poppler to enable `.pdf` reading:
 
-macOS: brew install poppler
+- **Windows**: [Download Poppler for Windows](http://blog.alivate.com.au/poppler-windows/)
+- **macOS**:  
+  ```bash
+  brew install poppler
 
-Linux: sudo apt install poppler-utils
+## Usage
 
-Usage
 To start the application:
+
 streamlit run app.py
+
 Then open your browser to: http://localhost:8501
 
-Example Use Cases
-Academic research and thesis plagiarism detection
+---
 
-Manuscript and journal originality screening
+## Example Use Cases
 
-Business content duplication checks
+- Academic research and thesis plagiarism detection
+- Manuscript and journal originality screening
+- Business content duplication checks
+- Classroom assignment reviews and project evaluations
 
-Classroom assignment reviews and project evaluations
+---
 
-Tech Stack
-Frontend: Streamlit
+## Tech Stack
 
-Embedding Model: SentenceTransformer (all-MiniLM-L6-v2)
+- Frontend: Streamlit
+- Embedding Model: SentenceTransformer (all-MiniLM-L6-v2)
+- PDF Parsing: pdfplumber
+- Web Search: duckduckgo_search (DuckDuckGo API)
 
-PDF Parsing: pdfplumber
+---
 
-Web Search: duckduckgo_search (DuckDuckGo API)
+## Project Structure
 
-
-Project Structureplagiarism-checker/
+plagiarism-checker/
 ├── app.py             # Streamlit app interface
 ├── plagiarism.py      # Core logic: embedding + web check
 ├── utils.py           # File handling and sentence processing
 ├── requirements.txt   # Python dependencies
 └── README.md          # Project documentation
 
-Author
+---
+
+## Author
+
 Developed by Vagisha Sharma
