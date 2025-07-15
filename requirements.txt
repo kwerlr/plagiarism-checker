@@ -1,0 +1,7 @@
+streamlit
+sentence-transformers
+spacy
+pdfplumber
+duckduckgo-search
+langdetect
+requests
