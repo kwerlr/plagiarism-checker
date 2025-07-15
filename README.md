@@ -1,79 +1,84 @@
-DeepDetect Pro
-DeepDetect Pro is an AI-powered plagiarism checker for academic, professional, and personal documents. It uses semantic analysis and web search to detect both internal (within or across documents) and external (web) plagiarism. The tool supports multi-file uploads, highlights plagiarized sentences, and provides direct links to matched web sources for transparency and trust.
+# DeepDetect Pro
 
-Features
-Upload and check multiple .txt and .pdf files
+**DeepDetect Pro** is an AI-powered plagiarism checker for academic, professional, and personal documents. It combines semantic analysis and live web search to detect both **internal plagiarism** (within or across uploaded files) and **external plagiarism** (from the web).
 
-Semantic plagiarism detection using sentence embeddings
+It supports multi-file uploads, highlights matched sentences, and provides links to matched web sources for clarity and verification.
 
-Detect internal plagiarism across all uploaded files
+---
 
-Detect web plagiarism using DuckDuckGo web results
+## Features
 
-Match sentences to web snippets with clickable source links
+- Upload and scan multiple `.txt` and `.pdf` files
+- Semantic similarity detection using sentence embeddings
+- Internal plagiarism detection across all uploaded content
+- External plagiarism detection via DuckDuckGo web search
+- Sentence-level match display with direct web source links
+- Adjustable similarity threshold for precision tuning
+- Clean, user-friendly interface powered by Streamlit
 
-Adjustable similarity threshold
+---
 
-Easy-to-use interface powered by Streamlit
+## How It Works
 
-How It Works
-Uploaded files are split into individual sentences.
+1. Uploaded files are split into individual sentences.
+2. Each sentence is encoded using a SentenceTransformer model (`all-MiniLM-L6-v2`).
+3. Internal similarity is computed across all sentence pairs.
+4. For external checks:
+   - Each sentence is queried on DuckDuckGo.
+   - Snippets are extracted and compared semantically.
+   - Matching snippets are shown with a similarity score and source link.
 
-Each sentence is converted to an embedding using a SentenceTransformer model.
+---
 
-Internal plagiarism is checked by comparing all sentence pairs within and across the uploaded files.
+## Installation
 
-Web plagiarism is checked by searching each sentence via DuckDuckGo, comparing the similarity, and providing the best match with a link to the source.
+Clone the repository and install dependencies:
 
-Installation
-Clone this repository and install the required packages:
-
-text
+```bash
 git clone https://github.com/kwerlr/plagiarism-checker.git
 cd plagiarism-checker
 pip install -r requirements.txt
-For PDF support, install poppler-utils:
 
-Windows: Use a pre-built binary (see official documentation)
+
+PDF Support
+Install Poppler to enable .pdf reading:
+
+Windows: Download from Poppler for Windows
 
 macOS: brew install poppler
 
 Linux: sudo apt install poppler-utils
 
 Usage
-To start the app locally:
-
-text
+To start the application:
 streamlit run app.py
-Then open your browser to http://localhost:8501.
+Then open your browser to: http://localhost:8501
 
 Example Use Cases
-Academic plagiarism detection
+Academic research and thesis plagiarism detection
 
-Journal or manuscript originality review
+Manuscript and journal originality screening
 
-Business and publisher content screening
+Business content duplication checks
 
-Reviewing student assignments and projects
+Classroom assignment reviews and project evaluations
 
 Tech Stack
 Frontend: Streamlit
 
-Embedding model: SentenceTransformer (all-MiniLM-L6-v2)
+Embedding Model: SentenceTransformer (all-MiniLM-L6-v2)
 
-PDF parsing: pdfplumber
+PDF Parsing: pdfplumber
 
-Web search: duckduckgo_search
+Web Search: duckduckgo_search (DuckDuckGo API)
 
-Project Structure
-text
-plagiarism-checker/
-│
-├── app.py
-├── plagiarism.py
-├── utils.py
-├── requirements.txt
-└── README.md
+
+Project Structureplagiarism-checker/
+├── app.py             # Streamlit app interface
+├── plagiarism.py      # Core logic: embedding + web check
+├── utils.py           # File handling and sentence processing
+├── requirements.txt   # Python dependencies
+└── README.md          # Project documentation
 
 Author
-Developed by Vagisha
+Developed by Vagisha Sharma
