@@ -52,9 +52,9 @@ Install Poppler to enable `.pdf` reading:
 ## Usage
 
 To start the application:
-
+```bash
 streamlit run app.py
-
+```
 Then open your browser to: http://localhost:8501
 
 ---
@@ -85,6 +85,7 @@ plagiarism-checker/
 ├── utils.py           # File handling and sentence processing
 ├── requirements.txt   # Python dependencies
 └── README.md          # Project documentation
+
 
 ---
 
